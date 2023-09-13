@@ -556,6 +556,7 @@ impl<'doc> TransactionMut<'doc> {
     /// predecessors already in place. Out of order updates from the same peer will be stashed
     /// internally and their integration will be postponed until missing blocks arrive first.
     pub fn apply_update(&mut self, update: Update) {
+        println!("apply_updat!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!e");
         let (remaining, remaining_ds) = update.integrate(self);
         let mut retry = false;
         {
